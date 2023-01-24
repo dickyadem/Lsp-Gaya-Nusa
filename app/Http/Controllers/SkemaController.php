@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSkemaRequest;
 use App\Http\Requests\UpdateSkemaRequest;
-use App\Models\Skema;
+use App\Models\Skema\Skema;
 
 class SkemaController extends Controller
 {
@@ -15,7 +15,7 @@ class SkemaController extends Controller
      */
     public function index()
     {
-        $data = Skema::all();
+        $data = Skema::with('units')->get();
 
         return $data;
     }

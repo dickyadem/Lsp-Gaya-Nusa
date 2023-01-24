@@ -19,10 +19,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('nama');
             $table->string('slug')->unique();
-            $table->string('jenis');
-            $table->integer('harga');
-            $table->string('unit_kompetensi');
-            $table->text('ringkasan');
+            $table->string('dokumen')->nullable();
+            $table->string('skkni')->nullable();
             $table->timestamps();
         });
     }
